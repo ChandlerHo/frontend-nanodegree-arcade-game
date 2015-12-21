@@ -60,9 +60,9 @@ Player.prototype.update = function(dt) {
     }
     //reset player once he collides bug
     for (var i = 0; i < allEnemies.length; i++) {
-        if(player.x < allEnemies[i].x + allEnemies[i].width && player.x + allEnemies[i].width > allEnemies[i].x && player.y < allEnemies[i].y + allEnemies[i].height && player.height + allEnemies[i].y > allEnemies[i].y) {
+        if(this.x < allEnemies[i].x + allEnemies[i].width && this.x + allEnemies[i].width > allEnemies[i].x && this.y < allEnemies[i].y + allEnemies[i].height && this.height + allEnemies[i].y > allEnemies[i].y) {
             console.log("collision");
-            player.reset();
+            this.reset();
             score -= 10;
             console.log(score);
         }
